@@ -1,8 +1,6 @@
 ## A Learning to Rank Project on a Daily Song Ranking Problem - part 2
 
-This folder contains the code related to the second part of the project described in this blog post:
-
-https://sease.io/2021/02/a-learning-to-rank-project-on-a-daily-song-ranking-problem-part-2.html
+This folder contains the code related to the second part of the project described in [this blog post](https://sease.io/2021/02/a-learning-to-rank-project-on-a-daily-song-ranking-problem-part-2.html)
 
 Check it out for more details!
 

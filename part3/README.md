@@ -1,11 +1,13 @@
-## A Learning to Rank Project on a Daily Song Ranking Problem - part 1
+## A Learning to Rank Project on a Daily Song Ranking Problem - part 3
 
-This folder contains the code related to the first part of the project described in [this blog post](https://sease.io/2020/12/a-learning-to-rank-project-on-a-daily-song-ranking-problem.html)
+This folder contains the code related to the third part of the project described in [this blog post](https://sease.io/2021/03/a-learning-to-rank-project-on-a-daily-song-ranking-problem-part-3.html)
 
 Check it out for more details!
 
+
 ### dataPrepocessing
-It contains the files to load the Spotify file and apply several data preprocessing techniques.
+It contains the files to load the Spotify CSV file and apply data preprocessing techniques.
+It includes a method to create the query id hashing (i.e. from multiple columns).
 
 ##### Explanation of parameters
 
@@ -15,13 +17,9 @@ It contains the files to load the Spotify file and apply several data preprocess
 
 -e | Encoding | Contains the categorical encoding to apply to the 'Track Name' feature (hash or d2v)
 
-Example: 
-
-    python3 -m part1.dataPreprocessing.main_preprocessing -o /Users/spotify_project/outputs -d /Users/spotify_project/spotify_dataset.csv -e hash
-
 
 ### trainingSetBuilder
-It contains the files for the creation of the training and test set.
+It contains the files for the creation of the training and test set applying a new split (random)
 
 ##### Explanation of parameters
 
@@ -33,11 +31,11 @@ It contains the files for the creation of the training and test set.
 
 -s | Test Set Size | Contains the size of the test set (around 20% of the entire dataset)
 
--t | Query id sample threshold | Contains the threshold set to avoid small query id samples
-
+-t | Query id sample threshold | Contains the threshold to set to avoid small query id samples
 
 ### modelTraining 
 It contains the files for the training of the model using the LambdaMART method (XGBoost).
+It includes a method to check the intersections (same rows) between training and test set when comparing different models on the same test set.
 
 ##### Explanation of parameters
 
@@ -50,3 +48,4 @@ It contains the files for the training of the model using the LambdaMART method 
 -n | Model Name | Name of the model we are creating
 
 -e | Evaluation Metric | The metric to use for the model generation (e.g. ndcg@10)
+

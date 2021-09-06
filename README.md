@@ -1,5 +1,5 @@
 # learning-to-rank-spotify
-#####A Learning to Rank Project on a Daily Song Ranking Problem
+##### A Learning to Rank Project on a Daily Song Ranking Problem
 
 This is a project that began as part of an internal Machine Learning Multidisciplinary Hackathon where the objective was to adapt the Spotify dataset on Worldwide Daily Song Ranking (available here https://www.kaggle.com/edumucelli/spotifys-worldwide-daily-song-ranking) to a Learning to Rank task.
 
@@ -16,4 +16,4 @@ part3 - https://sease.io/2021/03/a-learning-to-rank-project-on-a-daily-song-rank
 part4 - https://sease.io/2021/05/a-learning-to-rank-project-on-a-daily-song-ranking-problem-part-4.html
 
 
-For simplicity, the code for each specific blog post can be found in the folder of the same name
+For simplicity, the code for each specific blog post can be found in the namesake folder 

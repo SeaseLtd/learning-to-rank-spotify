@@ -6,10 +6,10 @@ https://sease.io/2020/12/a-learning-to-rank-project-on-a-daily-song-ranking-prob
 
 Check it out for more details!
 
-###dataPrepocessing
+### dataPrepocessing
 It contains the files to load the Spotify file and apply several data preprocessing techniques.
 
-#####Explanation of parameters
+##### Explanation of parameters
 
 -o | Output Directory | Contains the directory where to save the output files
 
@@ -21,10 +21,10 @@ e.g.
 
 python3 -m part1.dataPreprocessing.main_preprocessing -o /Users/spotify_project/outputs -d /Users/spotify_project/spotify_dataset.csv -e hash
 
-###trainingSetBuilder
+### trainingSetBuilder
 It contains the files for the creation of the training and test set.
 
-#####Explanation of parameters
+##### Explanation of parameters
 
 -o | Output Directory | Contains the directory where to save the output files
 
@@ -37,10 +37,10 @@ It contains the files for the creation of the training and test set.
 -t | Query id sample threshold | Contains the threshold set to avoid small query id samples
 
 
-###modelTraining 
+### modelTraining 
 It contains the files for the training of the model using the LambdaMART method (XGBoost).
 
-#####Explanation of parameters
+##### Explanation of parameters
 
 -o | Output Directory | Contains the directory where to save the output files
 

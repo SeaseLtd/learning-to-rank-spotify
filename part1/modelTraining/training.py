@@ -32,8 +32,8 @@ def train_model(output_dir, training_set, test_set, model_name, eval_metric):
     training_xgb_matrix.set_group(training_query_groups)
     test_xgb_matrix = xgboost.DMatrix(test_data_set, label=test_label_column)
     test_xgb_matrix.set_group(test_query_groups)
-    params = {'objective': 'rank:ndcg', 'eval_metric': eval_metric, 'verbosity': 2, 'early_stopping_rounds': 10}
-    watch_list = [(test_xgb_matrix, 'eval'), (training_xgb_matrix, 'train')]
+    params = {'objective': 'rank:ndcg', 'eval_metric': eval_metric, 'verbosity': 2}
+    watch_list = [(training_xgb_matrix, 'train'), (test_xgb_matrix, 'eval')]
 
     xgb_model = xgboost.train(params, training_xgb_matrix, num_boost_round=999, evals=watch_list)
     predictions = xgb_model.predict(test_xgb_matrix)
